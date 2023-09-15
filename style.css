@@ -1,0 +1,226 @@
+body {
+    background-image: url('pokeball-background.jpg'); /* Fondo con diseño de Pokébolas */
+    background-size: cover;
+    color: #333; /* Texto negro */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #FFCB05; /* Amarillo Pokémon para el encabezado */
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF0000; /* Rojo Pokémon */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Líneas blancas para el icono de hamburguesa */
+    margin: 3px 0;
+}
+
+#ramoncito {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-right: 20px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco para los enlaces */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .navbar-toggle {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #FFA500; /* Naranja Pokémon */
+        width: 100%;
+        align-items: center; /* Centra verticalmente */
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+    #ramoncito {
+        font-size: 24px;
+        font-weight: bold;
+        margin:20px
+          
+    }
+}
+
+/* Estilos para el contenido */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #0055A4; /* Azul Pokémon */
+    color: #fff; /* Texto blanco */
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #FFCB05; /* Amarillo Pokémon para los enlaces en el footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subraya los enlaces al pasar el mouse */
+}
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Texto blanco */
+}
+
+/* Estilos para la barra de navegación en modo oscuro */
+body.dark-mode .navbar {
+    background-color: #222; /* Cambiar el color de fondo de la barra de navegación en modo oscuro */
+    color: #fff; /* Cambiar el color del texto en modo oscuro */
+}
+
+/* Estilos para el contenido en modo oscuro */
+body.dark-mode .content {
+    background-color: #444; /* Cambiar el color de fondo del contenido en modo oscuro */
+    color: #fff; /* Cambiar el color del texto del contenido en modo oscuro */
+}
+
+/* Estilos para el footer en modo oscuro */
+body.dark-mode .footer {
+    background-color: #111; /* Cambiar el color de fondo del footer en modo oscuro */
+    color: #fff; /* Cambiar el color del texto del footer en modo oscuro */
+}
+
+/* Estilos para los enlaces en modo oscuro */
+body.dark-mode a {
+    color: #FFCB05; /* Cambiar el color de los enlaces en modo oscuro */
+}
+
+/* Estilos para los enlaces en el footer en modo oscuro */
+body.dark-mode .footer a {
+    color: #FFCB05; /* Cambiar el color de los enlaces en el footer en modo oscuro */
+}
+
+/* Estilos para el botón de modo oscuro en modo oscuro */
+body.dark-mode #modoBoton {
+    background-color: #FFCB05; /* Cambiar el color de fondo del botón de modo oscuro en modo oscuro */
+    color: #333; /* Cambiar el color del texto del botón de modo oscuro en modo oscuro */
+}
+
+/* PICACHU HTML ATENCION!!!/*
+/* Estilo para los divs de las tarjetas de Pokémon */
+.pokemon-card {
+    border: 1px solid #253B80; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interior */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    text-align: center; /* Alineación de texto en el centro */
+}
+
+/* Estilo para la tarjeta especial con degradado de colores Pokémon */
+.special-pokemon-card {
+    background: linear-gradient(45deg, #FF5959, #FFCB05, #253B80); /* Degradado de colores Pokémon */
+    border: 1px solid #253B80; /* Borde azul */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interior */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    text-align: center; /* Alineación de texto en el centro */
+}
+
+.pokemon-card img {
+    max-width: 100%; /* Imágenes ajustadas al ancho de la tarjeta */
+    height: auto; /* Altura automática */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.pokemon-card h2 {
+    color: #253B80; /* Texto azul para el título */
+    font-size: 24px; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+}
+
+.pokemon-card p {
+    color: #333; /* Texto negro */
+    font-size: 16px; /* Tamaño de fuente para el texto */
+}
+
+/*/ botones de picachu html
+/* Estilos para el botón "Ver Más" */
+.ver-mas-button {
+    background-color: #ffcc29; /* Amarillo claro - color de Pokémon tipo eléctrico */
+    color: #000; /* Texto en color negro */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mas-button:hover {
+    background-color: #fbb03b; /* Amarillo más oscuro al pasar el mouse */
+}

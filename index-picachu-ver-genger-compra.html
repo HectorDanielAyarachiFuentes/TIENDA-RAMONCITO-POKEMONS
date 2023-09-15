@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gengar - Comercio Digital de Pokémon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CATALOGO POKÉMON</h1>
+        <p>Solo disponibles los mejores Pokémon:</p>
+    </header>
+
+    <div class="navbar">
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <span id="ramoncito">TIENDA RAMONCITO</span>
+        <ul class="navbar-menu" id="navbarMenu">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="#">CATÁLOGO</a></li>
+            <!-- Agrega más enlaces según sea necesario -->
+        </ul>
+        <button id="modoBoton">Modo oscuro</button> <!-- Botón de cambio de modo -->
+    </div>
+
+    <div class="content">
+        <div class="pokemon-card">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6af3dc15-155e-4325-9dd9-ce85298594b8/d6snylx-953c2cc9-8f7c-41a4-a7b2-0f197dbf88de.jpg/v1/fit/w_428,h_414,q_70,strp/doge_venusaur_by_rytrom27_d6snylx-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDE0IiwicGF0aCI6IlwvZlwvNmFmM2RjMTUtMTU1ZS00MzI1LTlkZDktY2U4NTI5ODU5NGI4XC9kNnNueWx4LTk1M2MyY2M5LThmN2MtNDFhNC1hN2IyLTBmMTk3ZGJmODhkZS5qcGciLCJ3aWR0aCI6Ijw9NDI4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.VeZ5A70FgpvU5Uz9f205JiPdmZ2AmTyJduF7Yro7iKE" alt="Gengar es tan bromista que ni es ese.">
+            <h2>Gengar</h2>
+            <p>Gengar es un Pokémon de tipo fantasma/veneno que disfruta gastando bromas a otros Pokémon.</p>
+            <h3>Características:</h3>
+            <ul>
+                <li>Tipo: Fantasma/Veneno</li>
+                <li>Habilidad: Levitación</li>
+                <li>Poder: 65</li>
+                <li>Velocidad: 110</li>
+            </ul>
+            <button class="compra-button">Compra</button>
+            <button onclick="goBack()" class="volver-button">Volver Atrás</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2023 Comercio Digital de Pokémon</p>
+        <p>¡Atrápalos ya, o al menos clónalos!</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
