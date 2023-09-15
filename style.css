@@ -67,6 +67,21 @@ body.dark-mode {
     color: #fff; /* Texto blanco para los enlaces */
 }
 
+
+/* Estilos para el modo oscuro VENTANA EMERGENTE */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #fff !important;
+}
+.dark-mode h2 {
+    color: #1100ff !important; /* Cambia el color del encabezado en modo oscuro */
+}
+/* Agrega otros estilos para elementos específicos aquí */
+
+
+
+
+
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
     .navbar-toggle {
@@ -305,6 +320,8 @@ body.dark-mode #modoBoton {
 }
 
 /* Agrega más media queries según sea necesario para otras resoluciones */
+
+
 
 
 
