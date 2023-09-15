@@ -7,12 +7,15 @@ function toggleMenu() {
 
 // DARK MODE
 var modoBoton = document.getElementById('modoBoton');
-var body = document.body;
+var ventanaEmergente = document.getElementById("miVentanaEmergente");
 
 // Agrega un listener al botón para cambiar el modo
 modoBoton.addEventListener('click', function() {
     // Alternar la clase "dark-mode" en el elemento body
-    body.classList.toggle('dark-mode');
+    document.body.classList.toggle('dark-mode');
+    
+    // Alternar la clase "dark-mode" en la ventana emergente
+    ventanaEmergente.classList.toggle("dark-mode");
 });
 
 
@@ -39,3 +42,4 @@ function cerrarVentanaEmergente() {
 
 // Agrega un evento de clic al botón para cerrar la ventana emergente
 cerrarPopup.addEventListener('click', cerrarVentanaEmergente);
+
