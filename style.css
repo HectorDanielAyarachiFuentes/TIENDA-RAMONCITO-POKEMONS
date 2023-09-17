@@ -320,7 +320,7 @@ body.dark-mode #modoBoton {
  /* Estilos para hacer que el texto sea responsivo a 320px */
  @media screen and (max-width: 320px) {
     #titulo {
-        font-size: 28px; /* Tamaño de fuente más pequeño para pantalla pequeña */
+        font-size: 25px; /* Tamaño de fuente más pequeño para pantalla pequeña */
     }
 
     #descripcion {
