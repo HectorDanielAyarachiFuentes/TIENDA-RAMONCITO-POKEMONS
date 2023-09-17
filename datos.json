@@ -1,7 +1,7 @@
 [
     {
         "nombre": "Pikachu",
-        "imagen": "https://pbs.twimg.com/media/FLMjsSGXsAQakfm?format=webp&name=900x900",
+        "imagen": "https://github.com/HectorDanielAyarachiFuentes/TIENDA-RAMONCITO-POKEMONS/blob/8dde45491160c65c00978722ab0d0bd515fbf767/Fotos/FLMjsSGXsAQakfm.jpg?raw=true",
         "descripcion": "Pikachu es un Pokémon eléctrico muy conocido por su carisma y poder.",
         "caracteristicas": {
             "tipo": "Eléctrico",
@@ -13,7 +13,7 @@
     {
         "nombre": "Charizard",
         "tipo": "Fuego/Volador",
-        "imagen": "charizard.png",
+        "imagen": "https://github.com/HectorDanielAyarachiFuentes/TIENDA-RAMONCITO-POKEMONS/blob/8dde45491160c65c00978722ab0d0bd515fbf767/Fotos/doge_charizard_by_rytrom27_d6snycu-fullview.jpg?raw=true",
         "descripcion": "Charizard es un Pokémon de tipo fuego/volador, conocido por su ferocidad en batalla.",
         "caracteristicas": {
             "Habilidad": "Mar Llamas",
@@ -29,7 +29,7 @@
     {
         "nombre": "Gengar",
         "tipo": "Fantasma/Veneno",
-        "imagen": "gengar.png",
+        "imagen": "https://github.com/HectorDanielAyarachiFuentes/TIENDA-RAMONCITO-POKEMONS/blob/main/Fotos/pngwing.com.png?raw=true",
         "descripcion": "Gengar es un Pokémon de tipo fantasma/veneno que disfruta gastando bromas a otros Pokémon.",
         "caracteristicas": {
             "Habilidad": "Levitación",
