@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charizard - Comercio Digital de Pokémon</title>
+    <title>Pikachu - Comercio Digital de Pokémon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,28 +16,20 @@
         <div class="navbar-toggle" onclick="toggleMenu()">
             <div class="bar"></div>
             <div class="bar"></div>
-            <div class="bar"></div>
         </div>
-        <span id="ramoncito">TIENDA RAMONCITO</span>
-        <ul class="navbar-menu" id="navbarMenu">
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="#">CATÁLOGO</a></li>
-            <!-- Agrega más enlaces según sea necesario -->
-        </ul>
-        <button id="modoBoton">Modo oscuro</button> <!-- Botón de cambio de modo -->
     </div>
 
     <div class="content">
         <div class="pokemon-card">
-            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6af3dc15-155e-4325-9dd9-ce85298594b8/d6snycu-ee779e70-0516-4dfc-8a09-893c39ada387.png/v1/fill/w_362,h_354,q_80,strp/doge_charizard_by_rytrom27_d6snycu-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzU0IiwicGF0aCI6IlwvZlwvNmFmM2RjMTUtMTU1ZS00MzI1LTlkZDktY2U4NTI5ODU5NGI4XC9kNnNueWN1LWVlNzc5ZTcwLTA1MTYtNGRmYy04YTA5LTg5M2MzOWFkYTM4Ny5wbmciLCJ3aWR0aCI6Ijw9MzYyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.lYFVxRnGxdWl_vYv7Jb3r7ctztOdoxogc48gY-sG4mM" alt="Charizard un pokemon amable">
-            <h2>Charizard</h2>
-            <p>Charizard es un Pokémon de tipo fuego/volador, conocido por su ferocidad en batalla.</p>
+            <img src="" alt="">
+            <h2></h2>
+            <p></p>
             <h3>Características:</h3>
             <ul>
-                <li>Tipo: Fuego/Volador</li>
-                <li>Habilidad: Mar Llamas</li>
-                <li>Poder: 84</li>
-                <li>Velocidad: 100</li>
+                <li>Tipo: </li>
+                <li>Habilidad: </li>
+                <li>Poder: </li>
+                <li>Velocidad: </li>
             </ul>
             <button class="compra-button">Compra</button>
             <button onclick="goBack()" class="volver-button">Volver Atrás</button>
@@ -55,6 +47,33 @@
         function goBack() {
             window.history.back();
         }
+        
+        // Invocar los datos del archivo JSON y actualizar el DOM
+        fetch('datos.json')
+          .then(response => response.json())
+          .then(data => {
+            const charizard = data[1]; // Obtén el segundo objeto del array de datos
+
+            // Actualiza los elementos del DOM con los datos de Charizard
+            const charizardImg = document.querySelector('.pokemon-card img');
+            charizardImg.src = charizard.imagen;
+            charizardImg.alt = charizard.nombre;
+
+            document.querySelector('.pokemon-card h2').textContent = charizard.nombre;
+            document.querySelector('.pokemon-card p').textContent = charizard.descripcion;
+
+            const caracteristicasList = document.querySelector('.pokemon-card ul');
+            caracteristicasList.innerHTML = `
+              <li>Tipo: ${charizard.tipo}</li>
+              <li>Habilidad: ${charizard.caracteristicas.Habilidad}</li>
+              <li>Poder: ${charizard.caracteristicas.Poder}</li>
+              <li>Velocidad: ${charizard.caracteristicas.Velocidad}</li>
+            `;
+          })
+          .catch(error => {
+            console.error('Error al cargar los datos:', error);
+          });
     </script>
 </body>
 </html>
+
