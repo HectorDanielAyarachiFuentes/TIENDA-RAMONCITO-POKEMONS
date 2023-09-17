@@ -29,15 +29,15 @@
 
     <div class="content">
         <div class="pokemon-card">
-            <img src="https://pbs.twimg.com/media/FLMjsSGXsAQakfm?format=webp&name=900x900" alt="Pikachu amarillo">
-            <h2>Pikachu</h2>
-            <p>Pikachu es un Pokémon eléctrico muy conocido por su carisma y poder.</p>
+            <img src="" alt="">
+            <h2></h2>
+            <p></p>
             <h3>Características:</h3>
             <ul>
-                <li>Tipo: Eléctrico</li>
-                <li>Habilidad: Electricidad estática</li>
-                <li>Poder: 55</li>
-                <li>Velocidad: 90</li>
+                <li>Tipo: </li>
+                <li>Habilidad: </li>
+                <li>Poder: </li>
+                <li>Velocidad: </li>
             </ul>
             <button class="compra-button">Compra</button>
             <button onclick="goBack()" class="volver-button">Volver Atrás</button>
@@ -55,6 +55,32 @@
         function goBack() {
             window.history.back();
         }
+        
+        // Invocar los datos del archivo JSON y actualizar el DOM
+        fetch('datos.json')
+          .then(response => response.json())
+          .then(data => {
+            const pokemon = data[0]; // Obtén el primer objeto del array de datos
+
+            // Actualiza los elementos del DOM con los datos del Pokémon
+            const pokemonImg = document.querySelector('.pokemon-card img');
+            pokemonImg.src = pokemon.imagen;
+            pokemonImg.alt = pokemon.nombre;
+
+            document.querySelector('.pokemon-card h2').textContent = pokemon.nombre;
+            document.querySelector('.pokemon-card p').textContent = pokemon.descripcion;
+
+            const caracteristicasList = document.querySelector('.pokemon-card ul');
+            caracteristicasList.innerHTML = `
+              <li>Tipo: ${pokemon.caracteristicas.tipo}</li>
+              <li>Habilidad: ${pokemon.caracteristicas.habilidad}</li>
+              <li>Poder: ${pokemon.caracteristicas.poder}</li>
+              <li>Velocidad: ${pokemon.caracteristicas.velocidad}</li>
+            `;
+          })
+          .catch(error => {
+            console.error('Error al cargar los datos:', error);
+          });
     </script>
 </body>
 </html>
