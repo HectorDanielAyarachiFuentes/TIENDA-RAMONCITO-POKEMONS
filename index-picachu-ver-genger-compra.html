@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Catalog - Comercio Digital de Pokémon</title>
+    <title>Gengar - Comercio Digital de Pokémon</title>
     <link rel="stylesheet" href="style.css">
     <link type="image/png" sizes="120x120" rel="icon" href="https://github.com/HectorDanielAyarachiFuentes/TIENDA-RAMONCITO-POKEMONS/blob/main/Fotos/umbrella-corporation-120.png?raw=true">
+
 </head>
 <body>
     <header class="header">
@@ -18,7 +19,6 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-
         </div>
         <span id="ramoncito">TIENDA RAMONCITO</span>
         <ul class="navbar-menu" id="navbarMenu">
@@ -27,7 +27,6 @@
             <!-- Agrega más enlaces según sea necesario -->
         </ul>
         <button id="modoBoton">Modo oscuro</button> <!-- Botón de cambio de modo -->
-
     </div>
 
     <div class="content">
@@ -42,11 +41,13 @@
                 <li>Poder: </li>
                 <li>Velocidad: </li>
             </ul>
+            <p>Compra: <span id="compra"></span></p>
+            <p>Precio: $<span id="precio"></span></p>
+            <p>Votación: <span id="votacion"></span></p>
             
             <button class="compra-button">Compra</button>
             <button onclick="goBack()" class="volver-button">Volver Atrás</button>
         </div>
-
     </div>
 
     <footer class="footer">
@@ -77,11 +78,15 @@
 
             const caracteristicasList = document.querySelector('.pokemon-card ul');
             caracteristicasList.innerHTML = `
-              <li>Tipo: ${gengar.tipo}</li>
-              <li>Habilidad: ${gengar.caracteristicas.Habilidad}</li>
-              <li>Poder: ${gengar.caracteristicas.Poder}</li>
-              <li>Velocidad: ${gengar.caracteristicas.Velocidad}</li>
+                <li>Tipo: ${gengar.tipo}</li>
+                <li>Habilidad: ${gengar.caracteristicas.Habilidad}</li>
+                <li>Poder: ${gengar.caracteristicas.Poder}</li>
+                <li>Velocidad: ${gengar.caracteristicas.Velocidad}</li>
             `;
+
+            document.getElementById('compra').textContent = gengar.compra;
+            document.getElementById('precio').textContent = gengar.precio;
+            document.getElementById('votacion').textContent = gengar.votacion;
           })
           .catch(error => {
             console.error('Error al cargar los datos:', error);
