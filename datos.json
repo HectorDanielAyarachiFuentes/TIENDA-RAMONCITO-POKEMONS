@@ -8,7 +8,10 @@
             "habilidad": "Electricidad estática",
             "poder": 55,
             "velocidad": 90
-        }
+        },
+        "compra": "Puedes comprar a Pikachu en la tienda Pokémon.",
+        "precio":0,
+        "votacion": 0
     },
     {
         "nombre": "Charizard",
@@ -21,25 +24,21 @@
             "Velocidad": 100
         },
         "compra": "Puedes comprar a Charizard en la tienda Pokémon.",
-        "puntuacion": {
-            "valor": 0,
-            "totalVotos": 0
-        }
+        "precio": 0,
+        "votacion": 0
     },
     {
         "nombre": "Gengar",
         "tipo": "Fantasma/Veneno",
         "imagen": "https://github.com/HectorDanielAyarachiFuentes/TIENDA-RAMONCITO-POKEMONS/blob/main/Fotos/pngwing.com.png?raw=true",
-        "descripcion": "Gengar es un Pokémon de tipo fantasma/veneno que disfruta gastando bromas a otros Pokémon,ahora si es el verdadero.",
+        "descripcion": "Gengar es un Pokémon de tipo fantasma/veneno que disfruta gastando bromas a otros Pokémon.",
         "caracteristicas": {
             "Habilidad": "Levitación",
             "Poder": 65,
             "Velocidad": 110
         },
         "compra": "Puedes comprar a Gengar en la tienda Pokémon.",
-        "puntuacion": {
-            "valor": 0,
-            "totalVotos": 0
-        }
+        "precio": 0,
+        "votacion": 0
     }
 ]
