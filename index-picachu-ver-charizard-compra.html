@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pikachu - Comercio Digital de Pokémon</title>
+    <title>Charizard - Comercio Digital de Pokémon</title>
     <link rel="stylesheet" href="style.css">
     <link type="image/png" sizes="120x120" rel="icon" href="https://github.com/HectorDanielAyarachiFuentes/TIENDA-RAMONCITO-POKEMONS/blob/main/Fotos/umbrella-corporation-120.png?raw=true">
+
 </head>
 <body>
-     
     <header class="header">
-        <h1 id="titulo">🔥CHARIZARD🔥</h1>
-        <p id="descripcion">Solo disponibles los mejores Pokémon:</p>
+        <h1>🔥CHARIZARD🔥</h1>
+        <p>Solo disponibles los mejores Pokémon:</p>
     </header>
 
     <div class="navbar">
@@ -19,7 +19,6 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
-
         </div>
         <span id="ramoncito">TIENDA RAMONCITO</span>
         <ul class="navbar-menu" id="navbarMenu">
@@ -42,6 +41,10 @@
                 <li>Poder: </li>
                 <li>Velocidad: </li>
             </ul>
+            <p>Compra: <span id="compra"></span></p>
+            <p>Precio: $<span id="precio"></span></p>
+            <p>Votación: <span id="votacion"></span></p>
+
             <button class="compra-button">Compra</button>
             <button onclick="goBack()" class="volver-button">Volver Atrás</button>
         </div>
@@ -63,7 +66,7 @@
         fetch('datos.json')
           .then(response => response.json())
           .then(data => {
-            const charizard = data[1]; // Obtén el segundo objeto del array de datos
+            const charizard = data.find(pokemon => pokemon.nombre === 'Charizard');
 
             // Actualiza los elementos del DOM con los datos de Charizard
             const charizardImg = document.querySelector('.pokemon-card img');
@@ -80,6 +83,10 @@
               <li>Poder: ${charizard.caracteristicas.Poder}</li>
               <li>Velocidad: ${charizard.caracteristicas.Velocidad}</li>
             `;
+
+            document.getElementById('compra').textContent = charizard.compra;
+            document.getElementById('precio').textContent = charizard.precio;
+            document.getElementById('votacion').textContent = charizard.votacion;
           })
           .catch(error => {
             console.error('Error al cargar los datos:', error);
